@@ -1,0 +1,6 @@
+@media (max-width: 600px) {
+    .courses-grid {
+      grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+  }
+  
