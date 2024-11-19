@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilim Nest</title>
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <link rel="stylesheet" href="./styles/courses.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-line">
+          <div class="header-logo">
+            <img src="./img/" alt="logo" />
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="courses.html">Курсы</a></li>
+              <li><a href="#">Гайд от нас</a></li>
+              <img src="./img/mingcute_down-line.svg" alt="стрелка" />
+              <li><a href="#">Найти репититоров</a></li>
+              <li><a href="#">Стать преподавателем</a></li>
+            </ul>
+          </nav>
+          <div class="nav-end">
+            <a href="#">Войти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="welcome-page">
+        <div class="container">
+          <section class="hero">
+            <h1 class="hero-title">Найти идеального <br />преподавателя</h1>
+            <form id="searchForm" onsubmit="performSearch(event)">
+              <input
+                type="text"
+                name="searchQuery"
+                id="searchQuery"
+                placeholder="Найти курсы.."
+                required
+              />
+              <button type="submit" class="btn" id="searchBtn">Искать</button>
+            </form>
+
+            <div class="slider-container">
+              <!-- <button class="arrow left-arrow" onclick="scrollLeft()">
+                <img src="./img/" alt="">
+              </button> -->
+              <div class="slider">
+                <div class="slide"> <img src="./img/math.svg" alt=""> <br>Математика</div>
+                <div class="slide"> <img src="./img/english.svg" alt=""> <br>English</div>
+                <div class="slide"> <img src="./img/pythonsvg.svg" alt=""> <br>Python</div>
+                <div class="slide"> <img src="./img/unity.svg" alt=""> <br>Unity</div>
+                <div class="slide"> <img src="./img/geog.svg" alt=""> <br>География</div>
+                <div class="slide"> <img src="./img/janapese.svg" alt=""> <br>Японский</div>
+                <div class="slide"> <img src="./img/js.svg" alt=""> <br>JavaScript</div>
+                <div class="slide"> <img src="./img/graphicdesign.svg" alt=""> <br>Graphic Design</div>
+              </div>
+              <button class="arrow right-arrow" onclick="scrollRight()">
+                <img src="./img/arrow-right.svg" alt="arrow-button">
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+      <div class="courses">
+        <div class="container">
+            <div class="cou-holder">
+                <div class="our-courses">
+                  <h2 class="courses-title"><img src="./img/python.svg" alt="python">PYTHON</h2>
+                  <p class="courses-text">
+                      Python-разработчики пишут код и создают сайты, приложения, сервисы и боты совместно с другими специалистами. При этом они занимаются только внутренней логикой продуктов — за дизайн и «внешние» составляющие обычно отвечают другие члены команды.
+                  </p>
+                </div>
+                <div class="show-courses">
+                  <button class="btn">
+                    Просмотреть курс
+                    <img src="./img/arrow-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+  
+              <div class="course-header">
+                  <span class="course-duration"><img src="./img/calendar-days.svg" alt=""> 12 Недель</span>
+                  <span class="course-level">Beginner</span>
+                  <span class="course-rating">★ 5 (96 reviews)</span>
+              </div>
+  
+              <div class="images">
+                  <img src="./img/py.svg" alt="py">
+                  <img src="./img/py.svg" alt="py">
+                  <img src="./img/py.svg" alt="py">
+              </div>
+      
+              <div class="syllabus-container">
+                  <div class="syllabus-header">
+                      <p>Учебный план</p>
+              </div>
+              <div class="syllabus">
+                  <div class="steps">
+                      <div class="numbering">01</div>
+                      <p>Введение в программирование и Python</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">02</div>
+                      <p>Основы синтаксиса.Управляющие конструкци
+                          if,else,elif
+                          for,while
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">03</div>
+                      <p>Строки и их методы
+                          (upper(), lower(), split(), join(), и т.д.)
+                          Работа с файлами open(), read(), write(), и т.д.
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">04</div>
+                      <p>Основы объектно-ориентированного программирования (ООП)</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">05</div>
+                      <p>Курсовой проект или практическая работа</p>
+                  </div>
+              </div>
+            </div>     
+        </div>
+      </div>
+
+      <div class="courses">
+        <div class="container">
+            <div class="cou-holder">
+                <div class="our-courses">
+                  <h2 class="courses-title"><img src="./img/unity-color.svg" alt="python">UNITY</h2>
+                  <p class="courses-text">
+                    Изучайте Unity самостоятельно с помощью онлайн-курсов и обучающих материалов. Научитесь творить в своей школе или колледже или включите Unity в учебную программу вашего учебного заведения. Расширьте свои профессиональные навыки, чтобы подготовиться к работе в востребованных сферах.
+                  </p>
+                </div>
+                <div class="show-courses">
+                  <button class="btn">
+                    Просмотреть курс
+                    <img src="./img/arrow-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+  
+              <div class="course-header">
+                  <span class="course-duration"><img src="./img/calendar-days.svg" alt=""> 12 Недель</span>
+                  <span class="course-level">Beginner</span>
+                  <span class="course-rating">★ 5 (96 reviews)</span>
+              </div>
+  
+              <div class="images">
+                  <img src="./img/Unity-img.svg" alt="py">
+                  <img src="./img/Unity-img.svg" alt="py">
+                  <img src="./img/Unity-img.svg" alt="py">
+              </div>
+      
+              <div class="syllabus-container">
+                  <div class="syllabus-header">
+                      <p>Учебный план</p>
+              </div>
+              <div class="syllabus">
+                  <div class="steps">
+                      <div class="numbering">01</div>
+                      <p>Введение в Unity и основы разработки игр</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">02</div>
+                      <p>Основы программирования на C# для Unity
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">03</div>
+                      <p>Работа с физикой и анимацией
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">04</div>
+                      <p>Создание игрового процесса</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">05</div>
+                      <p>Завершение проекта и публикация игры</p>
+                  </div>
+              </div>
+            </div>     
+        </div>
+      </div>
+
+      <div class="courses">
+        <div class="container">
+            <div class="cou-holder">
+                <div class="our-courses">
+                  <h2 class="courses-title"><img src="./img/unity-color.svg" alt="python">Английский язык</h2>
+                  <p class="courses-text">
+                    В рамках курса участники будут изучать более сложные грамматические конструкции, такие как продвинутые времена, условные предложения, модальные глаголы и страдательный залог. Это поможет более точно выражать свои мысли и понимать структуру языка.
+                  </p>
+                </div>
+                <div class="show-courses">
+                  <button class="btn">
+                    Просмотреть курс
+                    <img src="./img/arrow-down.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+  
+              <div class="course-header">
+                  <span class="course-duration"><img src="./img/calendar-days.svg" alt=""> 12 Недель</span>
+                  <span class="course-level">Beginner</span>
+                  <span class="course-rating">★ 5 (96 reviews)</span>
+              </div>
+  
+              <div class="images">
+                  <img src="./img/py.svg" alt="py">
+                  <img src="./img/py.svg" alt="py">
+                  <img src="./img/py.svg" alt="py">
+              </div>
+      
+              <div class="syllabus-container">
+                  <div class="syllabus-header">
+                      <p>Учебный план</p>
+              </div>
+              <div class="syllabus">
+                  <div class="steps">
+                      <div class="numbering">01</div>
+                      <p>Грамматика</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">02</div>
+                      <p>Язык и его основные принцпы 
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">03</div>
+                      <p>Разговорный Английский
+                      </p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">04</div>
+                      <p>Практические знания</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="steps">
+                      <div class="numbering">05</div>
+                      <p>Тестовые задачи</p>
+                  </div>
+              </div>
+            </div>     
+        </div>
+      </div>
+
+      
+
+
+      
+
+      
+      
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-holder">
+          <div class="contacts">
+            <div class="logo"><img src="./img/" alt="logo"></div>
+            <div class="gmail"><img src="./img/gmailsvg.svg" alt=""> bilimnest@gmail.com</div>
+            <div class="phone"><img src="./img/phone.svg" alt=""> +888 777 99 88</div>
+            <div class="place"><img src="./img/place.svg" alt=""> Где-то в этом мире</div>
+          </div>
+          <div class="additional">
+            <div class="help">
+              <p>Помощь</p>
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Наши курсы</a>
+              <a href="#">Часто задаваемые вопросы</a>
+            </div>
+            <div class="about-us">
+              <p>О нас</p>
+              <a href="">Компания</a>
+              <a href="">Наша миссия</a>
+            </div>
+            <div class="social-media">
+              <p>Социальные сети</p>
+              <a href="#"><img src="./img/facebooksvg.svg" alt=""></a>
+              <a href="#"><img src="./img/twitter.svg" alt=""></a>
+              <a href="#"><img src="./img/ln.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  body {
+    font-family: inter;
+    .inter {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+  /* Стили для header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  
+  .header-line {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav li {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .nav ul img {
+    padding-left: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-end a {
+    color: #c1a1ff;
+  }
+  
+  .welcome-page {
+    background-color: rgb(234, 207, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(234, 207, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    border-end-end-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  /* Стили для hero-секции */
+  .hero {
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  .hero-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+  .hero-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #searchForm {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+    border-radius: 30px ;
+  }
+  #searchQuery {
+    width: 685px;
+    padding: 10px;
+    border: 8px solid #f6f2ff;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+  #searchBtn {
+    padding: 2px 15px;
+    margin-left: -92px;
+    background-color: #b58fff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 35px;
+  }
+  #searchBtn:hover {
+    background-color: #5a52e4;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: #f6f2ff;
+    padding: 10px;
+    border-radius: 50px;
+    justify-content: center;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .slide {
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .slide:hover {
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+  }
+  
+  .arrow {
+    display: flex;
+    background-color: white;
+    border-radius: 30px;
+    border: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0px 20px;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  /* Стили для courses-секции */
+  .courses {
+    margin-bottom: 60px;
+    margin: 120px;
+    background-color: #FCFCFD;
+    border-radius: 30px;
+    border: 1px solid #F7F7F8;
+  }
+
+  .images img{
+    width: 380px;
+    height: 380px;
+  }
+  
+  .cou-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  
+  }
+  
+  .our-courses {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .courses-title {
+    text-align: start;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .courses-text {
+    color: #59595a;
+  }
+
+  .course {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background-color: #b58fff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 35px;
+    margin: 0px 40px;
+  }
+  
+  .course-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .course-content {
+    padding: 15px;
+  }
+  
+  .course-header {
+    display: flex;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 10px;
+    gap: 20px;
+  }
+  
+  .course-duration {
+    display: flex;
+    background-color: #F6F2FF;
+    color: #B58FFF;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 14px;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  .course-level {
+    background-color: #E8F2FF;
+    color: #157DFE;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  .syllabus-container {
+    border: 1px solid #F1F1F3;
+    border-radius: 30px;
+  }
+
+  .syllabus-header {
+    background-color: #F6F2FF;
+    border: 1px solid #F1F1F3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 24px;
+
+  }
+
+  .syllabus {
+    display: flex;
+    padding: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .steps {
+    width: 165px; /* ширина границ */
+    word-wrap: break-word; /* перенос длинных слов */
+    overflow: hidden; /* обрезка текста */
+  }
+
+  .steps p {
+    font-size: 14px;
+  }
+
+  .numbering {
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .line {
+    height: 141px;
+    width: 1px;
+    background-color: #F1F1F3;
+  }
+  
+  
+  /* footer */
+  .footer {
+    background-color: #262626;
+    color: white;
+    padding: 30px 0px;
+    margin-top: 200px;
+  }
+  
+  .footer-holder{
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .help a {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .about-us a {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .additional {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .help {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-media img {
+    margin-top: 10px;
+    margin-right: 7px;
+    width: 36px;
+    height: 36px;
+  }
+  
