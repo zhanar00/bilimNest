@@ -1,0 +1,220 @@
+.goodToKnow-box {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 12px;
+  background-color: #fcc7c77d;
+  padding: 100px 30px;
+  width: 500px;
+}
+
+.goodToKnow-box h3 {
+  margin-bottom: 20px;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+  border-radius: 30px;
+}
+#searchQuery {
+  width: 685px;
+  padding: 10px;
+  border: 8px solid #f8e0e077;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 2px 15px;
+  margin-left: -92px;
+  background-color: #fcc7c77d;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 35px;
+}
+#searchBtn:hover {
+  background-color: #b58fff;
+}
+
+.mostLearnedCourse {
+  padding: 25px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #f1f1f3;
+  cursor: pointer;
+}
+
+.mostLearnedCourse:hover {
+  background-color: #b48fff5c;
+}
+
+.preference-holder {
+  width: 50%;
+}
+
+.preference-holder h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.suggestions-box {
+  position: relative;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  margin-top: 10px;
+  padding: 20px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.suggestions-box p {
+  margin: 10px 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions-box p:hover {
+  background-color: #f0f0f0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #b58fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #b48fff5c;
+}
+
+.number-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.number-holder p {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.preference-holder input {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-content {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  max-width: 800px; 
+  height: 50%;
+  max-height: 400px; 
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
+  padding: 50px; 
+  border-radius: 25px; 
+  z-index: 1000;
+  overflow: auto; 
+}
+
+.modal-content {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.user-holder {
+  display: flex;
+  padding: 30px;
+}
+
+.user {
+  display: flex;
+  gap: 30px;
+  margin: 10px 180px;
+
+}
+
+.user-holder img {
+  height: 40px;
+  width: 40px;
+}
+
+.teachers-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 80px;
+}
+
+
+

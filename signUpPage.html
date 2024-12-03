@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilim Nest</title>
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <link rel="stylesheet" href="./styles/courses.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link rel="stylesheet" href="./styles/loginPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-line">
+          <div class="header-logo">
+            <img src="./img/" alt="logo" />
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="courses.html">Курсы</a></li>
+              <li><a href="#">Гайд от нас</a></li>
+              <img src="./img/mingcute_down-line.svg" alt="стрелка" />
+              <li><a href="#">Найти репититоров</a></li>
+              <li><a href="#">Стать преподавателем</a></li>
+            </ul>
+          </nav>
+          <div class="nav-end">
+            <a href="loginPage.html">Войти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="log-holder">
+          <div class="about-us">
+            <h3>Преврати свою страсть в обучение!</h3>
+            <div class="text-description">
+              Присоединяйтесь к BILIMNEST — платформе, которая объединяет
+              учителей и учеников, стремящихся к знаниям. Ежедневно студенты
+              находят наставников, готовых делиться своим опытом и помогать в
+              освоении самых разных дисциплин. От школьных предметов и языков до
+              творческих направлений, спорта и технологий — у нас более 50 тем
+              для преподавания и обучения.
+            </div>
+            <div class="desc-box">
+              <div class="text-description2">
+                📅 Гибкий график — выбирайте удобное время для занятий.<br>
+                🧑💻 Учите онлайн или оффлайн — работайте в том формате, который
+                подходит вам и вашим ученикам. <br>💵 Определяйте стоимость уроков
+                самостоятельно — ваши знания достойны справедливой оплаты 
+              </div>
+              <div class="text-description3">
+                Студенты, профессионалы, энтузиасты — зарегистрируйтесь
+                на BILIMNEST и начните делиться своими знаниями уже сегодня!
+              </div>
+            </div>
+          </div>
+          <div class="login-holder">
+            <div class="welcome-login-holder">
+                <h2>Зарегистрироваться</h2>
+                <div class="welcome-text">Создайте учетную запись, чтобы разблокировать эксклюзивные функции.</div>
+            </div>
+            <div id="login-fields-holder" class="login-fields-holder">
+                <div id="form-floating" class="form-floating">
+                    <label for="floatingInput">ФИО</label>
+                    <input type="name" class="form-control" id="floatingInput" placeholder="Введите свое имя">
+                </div>
+                <div id="form-floating" class="form-floating">
+                    <label for="floatingInput">E-mail</label>
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Введите свой E-mail">
+                </div>
+                <div id="form-floating" class="form-floating">
+                    <label for="floatingPassword">Password</label>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Введите свой пароль">
+                </div>
+                <div id="agreement" class="form-check agreement">
+                    <input class="form-check-input" type="checkbox" value="agreement" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Я согласен с Условиями использования и Политикой конфиденциальности
+                    </label>
+                </div>
+                <button class="btn-login" data-url="signUp-as.html" type="submit">Зарегистрироваться</button>
+                <div class="divider">
+                    <div class="line"></div>
+                    <p>Или</p>
+                    <div class="line"></div>
+                </div>
+                <button class="btn-google" data-url="coursePage.html" type="submit"><img src="./img/google.svg" alt="google icon">Зарегистрируйтесь в Google</button>
+                <div class="signUp-holder">
+                    <p>У вас уже есть учетная запись?</p>
+                    <a href="loginPage.html">Авторизоваться⭷</a>
+                </div>
+                
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-holder">
+          <div class="contacts">
+            <div class="logo"><img src="./img/" alt="logo" /></div>
+            <div class="gmail">
+              <img src="./img/gmailsvg.svg" alt="" /> bilimnest@gmail.com
+            </div>
+            <div class="phone">
+              <img src="./img/phone.svg" alt="" /> +888 777 99 88
+            </div>
+            <div class="place">
+              <img src="./img/place.svg" alt="" /> Где-то в этом мире
+            </div>
+          </div>
+          <div class="additional">
+            <div class="help">
+              <p>Помощь</p>
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Наши курсы</a>
+              <a href="#">Часто задаваемые вопросы</a>
+            </div>
+            <div class="about-us">
+              <p>О нас</p>
+              <a href="">Компания</a>
+              <a href="">Наша миссия</a>
+            </div>
+            <div class="social-media">
+              <p>Социальные сети</p>
+              <a href="#"><img src="./img/facebooksvg.svg" alt="" /></a>
+              <a href="#"><img src="./img/twitter.svg" alt="" /></a>
+              <a href="#"><img src="./img/ln.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

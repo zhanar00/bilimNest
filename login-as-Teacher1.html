@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilim Nest</title>
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <link rel="stylesheet" href="./styles/courses.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link rel="stylesheet" href="./styles/loginPage.css" />
+    <link rel="stylesheet" href="./styles/login-as-Teacher.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;700&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-line">
+          <div class="header-logo">
+            <img src="./img/" alt="logo" />
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="courses.html">Курсы</a></li>
+              <li><a href="#">Гайд от нас</a></li>
+              <img src="./img/mingcute_down-line.svg" alt="стрелка" />
+              <li><a href="#">Найти репититоров</a></li>
+              <li><a href="#">Стать преподавателем</a></li>
+            </ul>
+          </nav>
+          <div class="nav-end">
+            <a href="loginPage.html">Войти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="log-holder">
+          <div class="goodToKnow-box">
+            <h3>Полезно знать</h3>
+            <div class="text-description">
+              На BilimNest вы можете преподавать более 100 предметов!
+              Используйте поисковую систему, чтобы найти предмет, который вы
+              преподаете, и пусть веселье начнется :)
+            </div>
+          </div>
+          <div class="preference-holder">
+            <h2>Какие предметы ты преподаешь?</h2>
+            <form id="searchForm" onsubmit="performSearch(event)">
+              <input
+                type="text"
+                name="searchQuery"
+                id="searchQuery"
+                placeholder="Найти курсы.."
+                required
+                oninput="showSuggestions(event)"
+              />
+              <button type="submit" class="btn" id="searchBtn">Искать</button>
+            </form>
+            <div id="suggestions" class="suggestions-box"></div>
+            <p>САМЫЕ ПРЕПОДАВАЕМЫЕ ПРЕДМЕТЫ</p>
+            <div class="mostLearnedCourse">
+              <a href="#">Английский язык</a>
+            </div>
+            <div class="mostLearnedCourse">
+              <a href="#">Python</a>
+            </div>
+            <div class="mostLearnedCourse">
+              <a href="#">Unity</a>
+            </div>
+            <div class="mostLearnedCourse">
+              <a href="#">География</a>
+            </div>
+            <div class="mostLearnedCourse">
+              <a href="#">Японский язык</a>
+            </div>
+            <div class="navigation-buttons">
+              <button id="backBtn" onclick="goBack()">Назад</button>
+              <button onclick="goNext()">Следующая</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-holder">
+          <div class="contacts">
+            <div class="logo"><img src="./img/" alt="logo" /></div>
+            <div class="gmail">
+              <img src="./img/gmailsvg.svg" alt="" /> bilimnest@gmail.com
+            </div>
+            <div class="phone">
+              <img src="./img/phone.svg" alt="" /> +888 777 99 88
+            </div>
+            <div class="place">
+              <img src="./img/place.svg" alt="" /> Где-то в этом мире
+            </div>
+          </div>
+          <div class="additional">
+            <div class="help">
+              <p>Помощь</p>
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Наши курсы</a>
+              <a href="#">Часто задаваемые вопросы</a>
+            </div>
+            <div class="about-us">
+              <p>О нас</p>
+              <a href="">Компания</a>
+              <a href="">Наша миссия</a>
+            </div>
+            <div class="social-media">
+              <p>Социальные сети</p>
+              <a href="#"><img src="./img/facebooksvg.svg" alt="" /></a>
+              <a href="#"><img src="./img/twitter.svg" alt="" /></a>
+              <a href="#"><img src="./img/ln.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

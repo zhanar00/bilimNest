@@ -1,0 +1,184 @@
+.log-holder {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: #59595A;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.about-us h3 {
+    color: #262626;
+    font-size: 32px;
+}
+
+.desc-box {
+    border: 1px solid #F1F1F3;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 80px 0;
+    gap: 20px;
+
+}
+
+.text-description3 {
+    /* border: 1px solid #F1F1F3; */
+    /* border-radius: ; */
+    margin-top: 25px;
+    color: #333333;
+}
+
+.login-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.welcome-login-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome-login-holder h2 {
+    font-size: 32px;
+    color: #262626;
+    margin-bottom: 15px;
+}
+
+.welcome-login-holder welcome-text {
+    display: flex;
+    align-items: center;
+}
+.login-fields-holder {
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.form-floating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+#floatingInput {
+    padding: 15px;
+    border: 1px solid #F1F1F3;
+    border-radius: 10px;
+}
+
+#floatingPassword {
+    padding: 15px;
+    border: 1px solid #F1F1F3;
+    border-radius: 10px;
+}
+
+.login-fields-holder a{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.btn-login {
+    justify-content: center;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background-color: #b58fff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+}
+
+.btn-login:hover {
+    background-color: #a074f9;
+}
+
+.btn-google:hover {
+    background-color:#b9b9b986;
+}
+
+.btn-appleId:hover {
+    background-color: #b9b9b986;
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E4E4E7;
+}
+
+.line {
+    width: 40%;
+    height: 1px;
+}
+
+.btn-google {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background-color: #F7F7F8;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+}
+
+.btn-google img {
+    size: 30px;
+}
+
+.btn-appleId {
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background-color: #F7F7F8;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+}
+
+.btn-apple img {
+    height: 30px;
+    width: 30px;
+}
+
+.signUp-holder {
+    display: flex;
+    gap: 10px;
+}
+
+.signUp-holder a:hover {
+    color: blue;
+}
+

@@ -1,0 +1,36 @@
+.as-who-holder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 100px;
+    justify-content: center;
+}
+
+/* .as-who-holder img {
+    width: 400px;
+    height: 400px;
+} */
+
+.as-teacher img {
+    height: 280px;
+    width: 330px;
+}
+
+.as-student img {
+    height: 300px;
+    width: 400px;
+}
+
+.as-student p {
+    margin-top: 8px;
+}
+
+.as-teacher p{
+    margin-top: 20px;
+}
+
+.as-who-holder p {
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+}
