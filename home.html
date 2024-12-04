@@ -26,7 +26,7 @@
               <li><a href="#">Гайд от нас</a></li>
               <img src="./img/mingcute_down-line.svg" alt="стрелка" />
               <li><a href="#">Найти репититоров</a></li>
-              <li><a href="#">Стать преподавателем</a></li>
+              <li><a href="login-as-Teacher1.html" id="teacherLoginLink">Стать преподавателем</a></li>
             </ul>
           </nav>
           <div class="nav-end">
@@ -35,6 +35,25 @@
         </div>
       </div>
     </header>
+
+    <script>
+      window.onload = () => {
+        const userEmail = localStorage.getItem("userEmail");
+    
+        if (userEmail) {
+          const navEnd = document.querySelector(".nav-end");
+          navEnd.innerHTML = `
+            <div class="profile-icon">
+              <img src="./img/profile-icon.png" alt="Профиль" />
+              <span>${userEmail}</span>
+            </div>
+          `;
+        } else {
+          window.location.href = "loginPage.html";
+        }
+      };
+    </script>
+    
 
     <main class="main">
       <div class="welcome-page">
@@ -303,16 +322,6 @@
           </div>
         </section>
       </div>
-
-      <!-- <div class="reviews">
-        <div class="container">
-          <div class="our-reviews">
-            <img src="./img/star.svg" alt="">
-            <h2>Наши Отзывы</h2>
-            <div class="reviews-text">Более миллиона студентов дали<br>5-звездочный отзыв своему репетитору</div>
-          </div>
-        </div>
-      </div> -->
 
       <div class="qa">
         <div class="container">

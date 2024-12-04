@@ -170,16 +170,16 @@ body.modal-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; 
-  max-width: 800px; 
+  width: 80%;
+  max-width: 800px;
   height: 50%;
-  max-height: 400px; 
+  max-height: 400px;
   background: white;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
-  padding: 50px; 
-  border-radius: 25px; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  border-radius: 25px;
   z-index: 1000;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .modal-content {
@@ -200,7 +200,6 @@ body.modal-open {
   display: flex;
   gap: 30px;
   margin: 10px 180px;
-
 }
 
 .user-holder img {
@@ -216,5 +215,23 @@ body.modal-open {
   margin-right: 80px;
 }
 
+.profile-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
 
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.profile-icon span {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
 

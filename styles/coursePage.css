@@ -1,0 +1,48 @@
+.best-holder {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  width: 50%;
+}
+
+.best {
+  text-align: start;
+  margin-bottom: 65px;
+}
+
+.best-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  gap: 10px; 
+  /* overflow: hidden;  */
+}
+
+.image-part {
+  background-image: url("img/guitar.png");
+  background-size: cover; /* Масштабируем на всю высоту */
+  background-repeat: no-repeat;
+  flex-shrink: 0; /* Чтобы части не сжимались */
+}
+
+.image-part-1 {
+  width: 100px;
+  height: 400px;
+  background-image: url("img/guitar.png");
+  background-position: left; /* Левый край изображения */
+}
+
+.image-part-2 {
+  width: 100px;
+  height: 400px;
+  background-position: center; /* Центр изображения */
+}
+
+.image-part-3 {
+  width: 100px;
+  height: 400px;
+  background-position: right; /* Правый край изображения */
+}

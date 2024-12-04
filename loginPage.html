@@ -28,7 +28,7 @@
               <li><a href="#">Гайд от нас</a></li>
               <img src="./img/mingcute_down-line.svg" alt="стрелка" />
               <li><a href="#">Найти репититоров</a></li>
-              <li><a href="#">Стать преподавателем</a></li>
+              <li><a href="login-as-Teacher1.html" id="teacherLoginLink">Стать преподавателем</a></li>
             </ul>
           </nav>
           <div class="nav-end">
@@ -53,10 +53,11 @@
             </div>
             <div class="desc-box">
               <div class="text-description2">
-                📅 Гибкий график — выбирайте удобное время для занятий.<br>
+                📅 Гибкий график — выбирайте удобное время для занятий.<br />
                 🧑💻 Учите онлайн или оффлайн — работайте в том формате, который
-                подходит вам и вашим ученикам. <br>💵 Определяйте стоимость уроков
-                самостоятельно — ваши знания достойны справедливой оплаты 
+                подходит вам и вашим ученикам. <br />💵 Определяйте стоимость
+                уроков самостоятельно — ваши знания достойны справедливой
+                оплаты 
               </div>
               <div class="text-description3">
                 Студенты, профессионалы, энтузиасты — зарегистрируйтесь
@@ -66,40 +67,82 @@
           </div>
           <div class="login-holder">
             <div class="welcome-login-holder">
-                <h2>Вход</h2>
-                <div class="welcome-text">Добро пожаловать! Пожалуйста, войдите в систему, чтобы получить доступ к своей учетной записи.</div>
+              <h2>Вход</h2>
+              <div class="welcome-text">
+                Добро пожаловать! Пожалуйста, войдите в систему, чтобы получить
+                доступ к своей учетной записи.
+              </div>
             </div>
             <div id="login-fields-holder" class="login-fields-holder">
-                <div id="form-floating" class="form-floating">
-                    <label for="floatingInput">Email address</label>
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                </div>
-                <div id="form-floating" class="form-floating">
-                    <label for="floatingPassword">Password</label>
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                </div>
-                <a href="#">Забыли пароль?</a>
-                <div id="remember-me" class="form-check remember-me">
-                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Remember me
-                    </label>
-                </div>
-                <button class="btn-login" data-url="home.html" type="submit">Login</button>
-                <div class="divider">
-                    <div class="line"></div>
-                    <p>Или</p>
-                    <div class="line"></div>
-                </div>
-                <button class="btn-google" data-url="coursePage.html" type="submit"><img src="./img/google.svg" alt="google icon">Вход через Google</button>
-                <button class="btn-appleId" data-url="coursePage.html" type="submit"><img src="./img/apple.svg" alt="apple icon">Вход через Apple ID</button>
-                <div class="signUp-holder">
-                    <p>Еще не зарегистрировались в BilimNest?</p>
-                    <a href="signUpPage.html">Зарегистрироваться⭷</a>
-                </div>
-                
+              <div id="form-floating" class="form-floating">
+                <label for="floatingInput">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div id="form-floating" class="form-floating">
+                <label for="floatingPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+              </div>
+              <div
+                id="error-message"
+                style="
+                  color: red;
+                  text-align: center;
+                  margin-top: 10px;
+                  display: none;
+                "
+              ></div>
+              <a href="#">Забыли пароль?</a>
+              <div id="remember-me" class="form-check remember-me">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="remember-me"
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Remember me
+                </label>
+              </div>
+              <button id="login-button" class="btn-login" data-url="home.html" type="submit">
+                Авторизоваться
+              </button>
+
+              <div class="divider">
+                <div class="line"></div>
+                <p>Или</p>
+                <div class="line"></div>
+              </div>
+              <button
+                class="btn-google"
+                data-url="coursePage.html"
+                type="button"
+              >
+                <img src="./img/google.svg" alt="google icon" />Вход через
+                Google
+              </button>
+              <button
+                class="btn-appleId"
+                data-url="coursePage.html"
+                type="submit"
+              >
+                <img src="./img/apple.svg" alt="apple icon" />Вход через Apple
+                ID
+              </button>
+              <div class="signUp-holder">
+                <p>Еще не зарегистрировались в BilimNest?</p>
+                <a href="signUpPage.html">Зарегистрироваться⭷</a>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>

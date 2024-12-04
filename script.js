@@ -70,70 +70,178 @@ function performSearch(event) {
   alert(`Ищем: ${query}`); // Здесь можно заменить на отправку запроса на сервер
 }
 
-
 // навигация назад
 function goBack() {
-  // Check if there is a previous history entry to go back to
   if (window.history.length > 1) {
     window.history.back();
   } else {
-    window.location.href = 'login-as-Teacher1.html'; // Navigate to the first page if no history
+    window.location.href = "login-as-Teacher1.html";
   }
 }
 
 // навигация след страница
 function goNext() {
-  const currentUrl = window.location.pathname;
-
-  if (currentUrl === '/login-as-Teacher4.html') {
-    // Show modal when navigating to the fifth page
-    showModal();
-    return; // Stop further navigation
-  }
+  const currentUrl = window.location.href;
 
   let nextPage;
-  switch (currentUrl) {
-    case '/login-as-Teacher1.html':
-      nextPage = 'login-as-Teacher2.html';
+  switch (true) {
+    case currentUrl.includes("login-as-Teacher1.html"):
+      nextPage = "login-as-Teacher2.html";
       break;
-    case '/login-as-Teacher2.html':
-      nextPage = 'login-as-Teacher3.html';
+    case currentUrl.includes("login-as-Teacher2.html"):
+      nextPage = "login-as-Teacher3.html";
       break;
-    case '/login-as-Teacher3.html':
-      nextPage = 'login-as-Teacher4.html';
+    case currentUrl.includes("login-as-Teacher3.html"):
+      nextPage = "login-as-Teacher4.html";
       break;
-    case '/login-as-Teacher4.html':
-      nextPage = 'login-as-Teacher5.html';
-      break;
+    case currentUrl.includes("login-as-Teacher4.html"):
+      showModal();
+      return;
     default:
-      nextPage = 'login-as-Teacher1.html'; 
+      nextPage = "login-as-Teacher1.html";
       break;
   }
   window.location.href = nextPage;
 }
 
-// что бы на первой странице не было бэк баттона :) 
-window.onload = function() {
-  const currentUrl = window.location.pathname;
-  const backButton = document.getElementById("backBtn");
 
-  if (currentUrl === '/login-as-Teacher1.html') {
-    backButton.style.display = "none"; 
+// что бы на первой странице не было бэк баттона :)
+window.onload = function () {
+  const backButton = document.getElementById("backBtn");
+  if (window.location.href.includes("login-as-Teacher1.html")) {
+    backButton.style.display = "none";
   } else {
-    backButton.style.display = "block"; 
+    backButton.style.display = "block";
   }
 };
 
-function showModal() {
-  const modal = document.getElementById('modal');
-  modal.classList.remove('hidden');
-  document.body.classList.add('modal-open');
 
-  // Automatically hide the modal after 5 seconds
+function showModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("hidden");
+  document.body.classList.add("modal-open");
+
+  // через 3сек модальный всплывающий экран исчезает сам
   setTimeout(() => {
-    modal.classList.add('hidden');
-    document.body.classList.remove('modal-open');
-    window.location.href = 'home.html'; // Redirect back to the first page
-  }, 5000);
+    modal.classList.add("hidden");
+    document.body.classList.remove("modal-open");
+    window.location.href = "home.html";
+  }, 3000);
 }
 
+
+
+// рега
+document.querySelector(".btn-login").addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const fullName = document.querySelector('#floatingInput[type="name"]').value.trim();
+  const email = document.querySelector('#floatingInput[type="email"]').value.trim();
+  const password = document.querySelector("#floatingPassword").value.trim();
+  const agreement = document.querySelector("#flexCheckDefault").checked;
+
+  if (!fullName || !email || !password || !agreement) {
+    alert("Пожалуйста, заполните все поля и согласитесь с условиями.");
+    return;
+  }
+
+  // Сохраняем данные пользователя
+  const user = { fullName, email, password };
+  localStorage.setItem("user", JSON.stringify(user));
+
+  alert("Регистрация прошла успешно!");
+  window.location.href = "loginPage.html";
+});
+
+
+
+// проверка данных
+document.querySelector("#login-button").addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const email = document.querySelector("#floatingInput").value.trim();
+  const password = document.querySelector("#floatingPassword").value.trim();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    alert("Нет зарегистрированных пользователей. Сначала зарегистрируйтесь.");
+    return;
+  }
+
+  if (email === user.email && password === user.password) {
+    alert(`Добро пожаловать, ${user.fullName}!`);
+    window.location.href = "home.html";
+  } else {
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = "Неправильный пароль или email.";
+    errorMessage.style.display = "block";
+  }
+});
+
+
+
+// функция что бы проверить авторизован ли юзер что бы зайти на страницу тичера
+//хз не работает корректно
+document.getElementById("teacherLoginLink").addEventListener("click", function (event) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user && user.email) {
+    window.location.href = "login-as-Teacher1.html";
+  } else {
+    alert("Пожалуйста, войдите в систему, чтобы продолжить.");
+    window.location.href = "loginPage.html";
+  }
+});
+
+
+
+document.querySelectorAll(".btn-google, .btn-appleId").forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetUrl = button.getAttribute("data-url");
+    if (targetUrl) {
+      window.location.href = targetUrl;
+    }
+  });
+});
+
+// иконка профиля после авторизации
+document.addEventListener("click", (event) => {
+  const profileIcon = event.target.closest(".profile-icon");
+
+  if (profileIcon) {
+    if (confirm("Вы действительно хотите выйти?")) {
+      localStorage.removeItem("userEmail");
+      window.location.href = "loginPage.html";
+    }
+  }
+});
+
+
+// const user = JSON.parse(localStorage.getItem('user'));
+
+// if (!user) {
+//     alert("Вы должны войти в систему, чтобы получить доступ к этой странице.");
+//     window.location.href = "loginPage.html";
+// }
+
+
+// // авторизация
+// const validCredentials = {
+//   email: "user",
+//   password: "1234"
+// };
+
+// document.getElementById("login-button").addEventListener("click", function(event) {
+//   event.preventDefault();
+
+//   const email = document.getElementById("floatingInput").value.trim();
+//   const password = document.getElementById("floatingPassword").value.trim();
+
+//   if (email !== validCredentials.email || password !== validCredentials.password) {
+//     const errorMessage = document.getElementById("error-message");
+//     errorMessage.textContent = "Неправильный пароль или email.";
+//     errorMessage.style.display = "block";
+//   } else {
+//     window.location.href = "home.html";
+//   }
+// });
