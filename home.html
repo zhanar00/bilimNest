@@ -26,20 +26,31 @@
               <li><a href="#">Гайд от нас</a></li>
               <img src="./img/mingcute_down-line.svg" alt="стрелка" />
               <li><a href="#">Найти репититоров</a></li>
-              <li><a href="login-as-Teacher1.html" id="teacherLoginLink">Стать преподавателем</a></li>
+              <li>
+                <a href="login-as-Teacher1.html" id="teacherLoginLink"
+                  >Стать преподавателем</a
+                >
+              </li>
             </ul>
           </nav>
-          <div class="nav-end">
+          <div class="nav-end" id="nav-end">
             <a href="loginPage.html">Войти</a>
+          </div>
+          <div id="profile-menu" class="hidden">
+            <ul>
+              <li><a href="/profile">Мой профиль</a></li>
+              <li><a href="/settings">Настройки</a></li>
+              <li id="logoutButton">Выйти</li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
 
-    <script>
+    <!-- <script>
       window.onload = () => {
         const userEmail = localStorage.getItem("userEmail");
-    
+
         if (userEmail) {
           const navEnd = document.querySelector(".nav-end");
           navEnd.innerHTML = `
@@ -52,8 +63,7 @@
           window.location.href = "loginPage.html";
         }
       };
-    </script>
-    
+    </script> -->
 
     <main class="main">
       <div class="welcome-page">
@@ -193,7 +203,14 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Английский язык</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">Английский язык</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
+
                   <p class="course-description">
                     Онлайн уроки на интерактивной платформе. Группы до 9
                     человек. Уроки полностью на английском языке для всех
@@ -215,7 +232,13 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Unity</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">Unity</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
                   <p class="course-description">
                     Платформа Unity для разработки в реальном времени Движок для
                     3D, 2D, VR и AR. Позволяет создателям создавать игры,
@@ -239,7 +262,13 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Python</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">Python</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
                   <p class="course-description">
                     Python-разработчики пишут код и создают сайты, приложения,
                     сервисы и боты совместно с другими специалистами. При этом
@@ -263,7 +292,13 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Graphic Design</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">Graphic Design</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
                   <p class="course-description">
                     Познакомьтесь с основами графического дизайна, включая
                     типографику, теорию цвета, верстку и методы работы с
@@ -286,7 +321,13 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Английский язык</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">English for Beginners</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
                   <p class="course-description">
                     Онлайн уроки на интерактивной платформе. Группы до 9
                     человек. Уроки полностью на английском языке для всех
@@ -308,7 +349,13 @@
                     <span class="course-level">Beginner</span>
                     <span class="course-rating">★ 5 (96 reviews)</span>
                   </div>
-                  <h3 class="course-title">Unity</h3>
+                  <div class="title-holder">
+                    <h3 class="course-title">Unity</h3>
+                    <div class="crystal-holder">
+                      <img src="./img/crystal.png" class="crystal" alt="" />
+                      <div class="crystal-value">5 crystals</div>
+                    </div>
+                  </div>
                   <p class="course-description">
                     Познакомьтесь с основами графического дизайна, включая
                     типографику, теорию цвета, верстку и методы работы с

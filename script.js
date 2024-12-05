@@ -1,3 +1,62 @@
+// // Проверка состояния авторизации
+// function displayProfileIcon() {
+//   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+//   const navEnd = document.getElementById("nav-end");
+//   navEnd.innerHTML = ""; // Очистить содержимое перед добавлением
+
+//   if (isLoggedIn) {
+//     const profileLink = document.createElement("a");
+//     profileLink.href = "/profile";
+//     profileLink.innerHTML = `
+//       <img
+//         src="./img/photo.png"
+//         alt="Profile"
+//         style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;"
+//       />
+//     `;
+//     navEnd.appendChild(profileLink);
+//   } else {
+//     const loginLink = document.createElement("a");
+//     loginLink.href = "/login";
+//     loginLink.textContent = "Войти";
+//     loginLink.style.cssText = "font-size: 16px; text-decoration: none; color: #000;";
+//     navEnd.appendChild(loginLink);
+//   }
+// }
+
+// // Вызываем функцию при загрузке страницы
+// window.onload = displayProfileIcon;
+
+
+function logout() {
+  localStorage.setItem("isLoggedIn", "false");
+  alert("Вы вышли из системы.");
+  window.location.href = "/login"; // Перенаправление на страницу входа
+}
+
+document.getElementById("logoutButton")?.addEventListener("click", logout);
+
+
+// открытие меню
+document.getElementById("nav-end").addEventListener("click", (event) => {
+  const profileMenu = document.getElementById("profile-menu");
+  profileMenu.classList.toggle("hidden");
+});
+
+
+// //Проверка статуса авторизации при загрузке
+// function checkAuthStatus() {
+//   const user = JSON.parse(localStorage.getItem("user"));
+//   if (!user || !user.email) {
+//     alert("Вы не авторизованы. Пожалуйста, войдите в систему.");
+//     window.location.href = "loginPage.html";
+//   }
+// }
+
+// // Вызов при загрузке защищённых страниц
+// window.onload = checkAuthStatus;
+
+
 // скролл курсов для хоум пейдж
 function scrollRight() {
   document.querySelector(".slider").scrollBy({ left: 200, behavior: "smooth" });
@@ -129,14 +188,23 @@ function showModal() {
   }, 3000);
 }
 
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.add("hidden");
+  document.body.classList.remove("modal-open");
+}
+
+document.getElementById("modal-close-btn").addEventListener("click", closeModal);
+
+
 
 
 // рега
-document.querySelector(".btn-login").addEventListener("click", (event) => {
+document.querySelector("#register-button").addEventListener("click", (event) => {
   event.preventDefault();
 
-  const fullName = document.querySelector('#floatingInput[type="name"]').value.trim();
-  const email = document.querySelector('#floatingInput[type="email"]').value.trim();
+  const fullName = document.querySelector("#floatingFullName").value.trim();
+  const email = document.querySelector("#floatingEmail").value.trim();
   const password = document.querySelector("#floatingPassword").value.trim();
   const agreement = document.querySelector("#flexCheckDefault").checked;
 
@@ -155,11 +223,11 @@ document.querySelector(".btn-login").addEventListener("click", (event) => {
 
 
 
-// проверка данных
+// вход
 document.querySelector("#login-button").addEventListener("click", (event) => {
   event.preventDefault();
 
-  const email = document.querySelector("#floatingInput").value.trim();
+  const email = document.querySelector("#floatingEmail").value.trim();
   const password = document.querySelector("#floatingPassword").value.trim();
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -171,6 +239,7 @@ document.querySelector("#login-button").addEventListener("click", (event) => {
 
   if (email === user.email && password === user.password) {
     alert(`Добро пожаловать, ${user.fullName}!`);
+    localStorage.setItem("isLoggedIn", "true"); // Устанавливаем статус авторизации
     window.location.href = "home.html";
   } else {
     const errorMessage = document.getElementById("error-message");
@@ -178,6 +247,7 @@ document.querySelector("#login-button").addEventListener("click", (event) => {
     errorMessage.style.display = "block";
   }
 });
+
 
 
 
@@ -204,25 +274,7 @@ document.querySelectorAll(".btn-google, .btn-appleId").forEach((button) => {
   });
 });
 
-// иконка профиля после авторизации
-document.addEventListener("click", (event) => {
-  const profileIcon = event.target.closest(".profile-icon");
 
-  if (profileIcon) {
-    if (confirm("Вы действительно хотите выйти?")) {
-      localStorage.removeItem("userEmail");
-      window.location.href = "loginPage.html";
-    }
-  }
-});
-
-
-// const user = JSON.parse(localStorage.getItem('user'));
-
-// if (!user) {
-//     alert("Вы должны войти в систему, чтобы получить доступ к этой странице.");
-//     window.location.href = "loginPage.html";
-// }
 
 
 // // авторизация

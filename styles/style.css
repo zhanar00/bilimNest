@@ -58,6 +58,36 @@ a {
   color: #c1a1ff;
 }
 
+#profile-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+#profile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#profile-menu ul li {
+  margin: 5px 0;
+}
+
+#profile-menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#profile-menu.hidden {
+  display: none;
+}
+
 .welcome-page {
   background-color: rgb(234, 207, 255);
   background: linear-gradient(
@@ -73,7 +103,7 @@ a {
   text-align: center;
   margin-bottom: 65px;
 }
-.hero-title {
+.hero-b {
   font-size: 64px;
   margin-bottom: 20px;
 }
@@ -91,7 +121,7 @@ a {
   justify-content: center;
   margin: 20px;
   align-items: center;
-  border-radius: 30px ;
+  border-radius: 30px;
 }
 #searchQuery {
   width: 685px;
@@ -202,7 +232,6 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-
 }
 
 .our-courses {
@@ -245,8 +274,8 @@ a {
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .course-card {
@@ -256,7 +285,7 @@ a {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  border: 1.5px solid #F7F7F8
+  border: 1.5px solid #f7f7f8;
 }
 
 .course-image img {
@@ -280,13 +309,29 @@ a {
   font-size: 18px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
+}
+
+.title-holder {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.crystal-holder {
+  display: flex;
+  pad: 10px;
+  align-items: center;
+}
+.crystal {
+  width: 30px;
+  height: 30px;
 }
 
 .course-duration {
   display: flex;
-  background-color: #F6F2FF;
-  color: #B58FFF;
+  background-color: #f6f2ff;
+  color: #b58fff;
   padding: 5px;
   border-radius: 30px;
   font-size: 14px;
@@ -294,9 +339,9 @@ a {
   gap: 3px;
 }
 
-  .course-level {
-  background-color: #E8F2FF;
-  color: #157DFE;
+.course-level {
+  background-color: #e8f2ff;
+  color: #157dfe;
   padding: 5px;
   border-radius: 30px;
   font-size: 14px;
@@ -306,7 +351,6 @@ a {
   font-size: 14px;
   color: #555;
   margin-bottom: 10px;
-
 }
 
 .enroll-button {
@@ -314,8 +358,8 @@ a {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #F6F2FF;
-  color: #B58FFF;
+  background-color: #f6f2ff;
+  color: #b58fff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -335,9 +379,8 @@ a {
 }
 
 .reviews-text {
-  color: #59595A;
+  color: #59595a;
 }
-
 
 /* q&a page */
 
@@ -351,7 +394,7 @@ a {
 }
 
 .qa-header p {
-  color: #59595A;
+  color: #59595a;
 }
 
 .qa-boxes {
@@ -362,8 +405,8 @@ a {
 .qa-box {
   display: flex;
   width: 100%;
-  background-color: #FCFCFD;
-  border: 1.5px solid #F7F7F8;
+  background-color: #fcfcfd;
+  border: 1.5px solid #f7f7f8;
   border-radius: 30px;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -377,7 +420,7 @@ a {
 .text-field {
   display: none;
   padding: 20px;
-  background-color: #F7F7F8;
+  background-color: #f7f7f8;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -409,7 +452,7 @@ a {
   margin-top: 200px;
 }
 
-.footer-holder{
+.footer-holder {
   display: flex;
   justify-content: space-between;
 }

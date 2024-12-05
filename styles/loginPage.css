@@ -70,7 +70,7 @@
     padding-bottom: 15px;
 }
 
-#floatingInput {
+#floatingFullName, #floatingEmail, #floatingInput {
     padding: 15px;
     border: 1px solid #F1F1F3;
     border-radius: 10px;
@@ -88,7 +88,7 @@
     font-size: 14px;
 }
 
-.btn-login {
+#login-button {
     justify-content: center;
     width: 100%;
     border-radius: 12px;
