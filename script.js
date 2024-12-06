@@ -21,7 +21,8 @@ function displayProfileIcon() {
     const loginLink = document.createElement("a");
     loginLink.href = "loginPage.html";
     loginLink.textContent = "Войти";
-    loginLink.style.cssText = "font-size: 16px; text-decoration: none; color: #000;";
+    loginLink.style.cssText =
+      "font-size: 16px; text-decoration: none; color: #000;";
     navEnd.appendChild(loginLink);
   }
 }
@@ -33,7 +34,7 @@ function checkAuthStatus() {
     alert("Вы не авторизованы. Пожалуйста, войдите в систему.");
     window.location.href = "loginPage.html";
   }
-};
+}
 
 // Выход из системы
 function logout() {
@@ -54,7 +55,7 @@ function goBack(defaultUrl = "login-as-Teacher1.html") {
 // Навигация на следующую страницу
 function goNext() {
   const currentUrl = window.location.href;
-  let nextPage
+  let nextPage;
 
   if (currentUrl.includes("login-as-Teacher1.html")) {
     nextPage = "login-as-Teacher2.html";
@@ -64,34 +65,47 @@ function goNext() {
     nextPage = "login-as-Teacher4.html";
   } else if (currentUrl.includes("login-as-Teacher4.html")) {
     showModal();
-    return
+    return;
   } else {
-    nextPage = "login-as-Teacher1.html"
+    nextPage = "login-as-Teacher1.html";
   }
 
   window.location.href = nextPage;
 }
 
+function showModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("hidden");
+  document.body.classList.add("modal-open");
+  setTimeout(() => {
+    modal.classList.add("hidden");
+    document.body.classList.remove("modal-open");
+    window.location.href = "teacherPage.html";
+  }, 3000);
+}
+
 // Регистрация
-document.querySelector("#register-button")?.addEventListener("click", (event) => {
-  event.preventDefault();
+document
+  .querySelector("#register-button")
+  ?.addEventListener("click", (event) => {
+    event.preventDefault();
 
-  const fullName = document.querySelector("#floatingFullName").value.trim();
-  const email = document.querySelector("#floatingEmail").value.trim();
-  const password = document.querySelector("#floatingPassword").value.trim();
-  const agreement = document.querySelector("#flexCheckDefault").checked;
+    const fullName = document.querySelector("#floatingFullName").value.trim();
+    const email = document.querySelector("#floatingEmail").value.trim();
+    const password = document.querySelector("#floatingPassword").value.trim();
+    const agreement = document.querySelector("#flexCheckDefault").checked;
 
-  if (!fullName || !email || !password || !agreement) {
-    alert("Пожалуйста, заполните все поля и согласитесь с условиями.");
-    return;
-  }
+    if (!fullName || !email || !password || !agreement) {
+      alert("Пожалуйста, заполните все поля и согласитесь с условиями.");
+      return;
+    }
 
-  const user = { fullName, email, password }
-  localStorage.setItem("user", JSON.stringify(user));
+    const user = { fullName, email, password };
+    localStorage.setItem("user", JSON.stringify(user));
 
-  alert("Регистрация прошла успешно!");
-  window.location.href = "loginPage.html";
-});
+    alert("Регистрация прошла успешно!");
+    window.location.href = "loginPage.html";
+  });
 
 // Вход
 document.addEventListener("DOMContentLoaded", () => {
@@ -109,13 +123,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const user = JSON.parse(localStorage.getItem("user"));
 
       if (!user) {
-        alert("Нет зарегистрированных пользователей. Сначала зарегистрируйтесь.");
+        alert(
+          "Нет зарегистрированных пользователей. Сначала зарегистрируйтесь."
+        );
         return;
       }
 
       // Сравниваем введённые данные с сохранёнными
       if (email === user.email && password === user.password) {
-        alert('Добро пожаловать, ${user.fullName}!');
+        alert("Добро пожаловать, ${user.fullName}!");
         localStorage.setItem("isLoggedIn", "true"); // Устанавливаем статус авторизации
         window.location.href = loginButton.getAttribute("data-url"); // Переход на домашнюю страницу
       } else {
@@ -132,7 +148,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // Подсказки для поиска курсов
-const courses = ["Английский язык", "Алгебра", "Python", "Unity", "География", "Японский язык"];
+const courses = [
+  "Математика",
+  "Английский язык",
+  "Алгебра",
+  "Python",
+  "Unity",
+  "География",
+  "Японский язык",
+];
 
 function showSuggestions(event) {
   const input = event.target.value.toLowerCase();
@@ -142,21 +166,25 @@ function showSuggestions(event) {
   if (!input) {
     suggestionsBox.style.display = "none";
     return;
-  };
+  }
 
-  const filteredCourses = courses.filter((course) => course.toLowerCase().includes(input));
+  const filteredCourses = courses.filter((course) =>
+    course.toLowerCase().includes(input)
+  );
 
   if (filteredCourses.length > 0) {
     suggestionsBox.style.display = "block";
     suggestionsBox.innerHTML = filteredCourses
-      .map((course) => `<p onclick="selectSuggestion('${course}')">${course}</p>`)
+      .map(
+        (course) => `<p onclick="selectSuggestion('${course}')">${course}</p>`
+      )
       .join("");
   } else {
     suggestionsBox.style.display = "none";
   }
-};
+}
 
 function selectSuggestion(course) {
   document.getElementById("searchQuery").value = course;
   document.getElementById("suggestions").style.display = "none";
-};
+}
